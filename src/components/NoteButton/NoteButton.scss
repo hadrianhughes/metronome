@@ -12,6 +12,11 @@ $borderRadius: 5px;
   display: inline-block;
   height: t-rem($size);
   margin: 0 t-rem($gutter);
+  text-align: center;
   vertical-align: top;
   width: t-rem($size);
+
+  img {
+    vertical-align: middle;
+  }
 }

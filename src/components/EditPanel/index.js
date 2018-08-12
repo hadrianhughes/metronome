@@ -18,18 +18,18 @@ const EditPanel = () => (
           <NoteButton note="semiquaver" onClick={note => console.log(note)} />
         </div>
         <div className={s.row}>
-          <NoteButton note="semibreveRest" onClick={note => console.log(note)} />
-          <NoteButton note="minimRest" onClick={note => console.log(note)} />
-          <NoteButton note="crotchetRest" onClick={note => console.log(note)} />
-          <NoteButton note="quaverRest" onClick={note => console.log(note)} />
-          <NoteButton note="semiquaverRest" onClick={note => console.log(note)} />
-        </div>
-        <div className={s.row}>
           <NoteButton note="dottedSemibreve" onClick={note => console.log(note)} />
           <NoteButton note="dottedMinim" onClick={note => console.log(note)} />
           <NoteButton note="dottedCrotchet" onClick={note => console.log(note)} />
           <NoteButton note="dottedQuaver" onClick={note => console.log(note)} />
           <NoteButton note="dottedSemiquaver" onClick={note => console.log(note)} />
+        </div>
+        <div className={s.row}>
+          <NoteButton note="semibreveRest" onClick={note => console.log(note)} />
+          <NoteButton note="minimRest" onClick={note => console.log(note)} />
+          <NoteButton note="crotchetRest" onClick={note => console.log(note)} />
+          <NoteButton note="quaverRest" onClick={note => console.log(note)} />
+          <NoteButton note="semiquaverRest" onClick={note => console.log(note)} />
         </div>
         <div className={s.row}>
           <NoteButton note="dottedSemibreveRest" onClick={note => console.log(note)} />
