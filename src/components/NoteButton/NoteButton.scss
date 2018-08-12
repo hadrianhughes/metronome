@@ -1,0 +1,17 @@
+@import '../../styles/settings.scss';
+@import '../../styles/tools.scss';
+
+$size: 40px;
+$gutter: 2px;
+$borderRadius: 5px;
+
+.root {
+  background-color: t-color(white);
+  border: 1px solid t-color(grey);
+  border-radius: t-rem($borderRadius);
+  display: inline-block;
+  height: t-rem($size);
+  margin: 0 t-rem($gutter);
+  vertical-align: top;
+  width: t-rem($size);
+}

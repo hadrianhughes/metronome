@@ -28,13 +28,25 @@ module.exports = {
             options: {
               sourceMap: true,
               modules: true,
-              localIdentName: '[local]___[hash:base64:5]',
+              localIdentName: '[name]___[local]___[hash:base64:5]',
             }
           },
           {
             loader: 'sass-loader',
           },
         ],
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+        ]
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
@@ -55,5 +67,8 @@ module.exports = {
       template: 'index.html',
       inject: 'body'
     })
-  ]
+  ],
+  devServer: {
+    disableHostCheck: true,
+  }
 };

@@ -1,0 +1,43 @@
+@import '../../styles/settings.scss';
+@import '../../styles/tools.scss';
+
+$backspaceHeight: 40px;
+$backspaceWidth: 80px;
+$buttonGutter: 2px;
+$buttonRadius: 5px;
+
+.root {
+  bottom: 0;
+  padding: t-spacing(small) 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.wrapper {
+  display: inline-block;
+}
+
+.pane {
+  float: left;
+}
+
+.row {
+  padding-bottom: t-rem($buttonGutter);
+  text-align: center;
+}
+
+.backspace {
+  background-color: t-color(white);
+  border-radius: t-rem($buttonRadius);
+  border: 1px solid t-color(grey);
+  height: t-rem($backspaceHeight);
+  margin: 0 t-rem($buttonGutter);
+  padding: 0 t-spacing(small);
+  vertical-align: top;
+  width: t-rem($backspaceWidth);
+
+  img {
+    vertical-align: middle;
+  }
+}

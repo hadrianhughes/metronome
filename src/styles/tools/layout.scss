@@ -1,0 +1,7 @@
+@function t-rem($px) {
+  @return ($px / $s-base-font-size) * 1rem;
+}
+
+@function t-spacing($key, $mul: 1) {
+  @return map-get($s-spacing, $key) * $mul;
+}
