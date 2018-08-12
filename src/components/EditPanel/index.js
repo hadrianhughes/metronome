@@ -40,9 +40,7 @@ const EditPanel = () => (
         </div>
       </div>
       <div className={s.pane}>
-        <button className={s.backspace} ariaLabel="Backspace" onClick={() => console.log('backspace')}>
-          <img src={backspace} alt="Backspace"/>
-        </button>
+        <NoteButton note="backspace" onClick={note => console.log(note)} />
       </div>
     </div>
   </div>

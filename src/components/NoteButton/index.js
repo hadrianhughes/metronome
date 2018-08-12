@@ -23,6 +23,7 @@ import dottedMinimRest from '../../icons/Dotted-Minim-Rest.svg';
 import dottedCrotchetRest from '../../icons/Dotted-Crotchet-Rest.svg';
 import dottedQuaverRest from '../../icons/Dotted-Quaver-Rest.svg';
 import dottedSemiquaverRest from '../../icons/Dotted-Semiquaver-Rest.svg';
+import backspace from '../../icons/Backspace.svg';
 
 const icons = {
   semibreve,
@@ -45,10 +46,18 @@ const icons = {
   dottedCrotchetRest,
   dottedQuaverRest,
   dottedSemiquaverRest,
+  backspace,
+};
+
+const iconClasses = {
+  backspace: [
+    s.double,
+    s.padding,
+  ],
 };
 
 const NoteButton = ({ note, onClick }) => (
-  <button className={`${s.root}`} onClick={() => onClick(note.toLowerCase())} ariaLabel={note}>
+  <button className={`${s.root} ${iconClasses[note] ? iconClasses[note].reduce((str, c) => `${str}${c} `, '') : ''}`} onClick={() => onClick(note.toLowerCase())} ariaLabel={note}>
     <img src={icons[note]} alt={note} />
   </button>
 );

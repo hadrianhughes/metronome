@@ -1,9 +1,10 @@
 @import '../../styles/settings.scss';
 @import '../../styles/tools.scss';
 
-$size: 40px;
+$size: 41px;
+$size--large: 49px;
 $gutter: 2px;
-$borderRadius: 5px;
+$borderRadius: 3px;
 
 .root {
   background-color: t-color(white);
@@ -12,11 +13,34 @@ $borderRadius: 5px;
   display: inline-block;
   height: t-rem($size);
   margin: 0 t-rem($gutter);
+  padding: t-spacing(xsmall);
   text-align: center;
   vertical-align: top;
   width: t-rem($size);
 
+  @include t-respond-to-min(small) {
+    height: t-rem($size--large);
+    width: t-rem($size--large);
+  }
+
+  &:active {
+    background-color: t-color(grey);
+  }
+
   img {
     vertical-align: middle;
+    width: 100%;
   }
+}
+
+.double {
+  width: t-rem($size * 2);
+
+  @include t-respond-to-min(small) {
+    width: t-rem($size--large * 2);
+  }
+}
+
+.padding {
+  padding: 0 t-spacing(small);
 }
