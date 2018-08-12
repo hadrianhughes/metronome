@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import s from './NoteButton.scss';
+import s from './IconButton.scss';
 
 import semibreve from '../../icons/Semibreve.svg';
 import minim from '../../icons/Minim.svg';
@@ -56,15 +56,15 @@ const iconClasses = {
   ],
 };
 
-const NoteButton = ({ note, onClick }) => (
-  <button className={`${s.root} ${iconClasses[note] ? iconClasses[note].reduce((str, c) => `${str}${c} `, '') : ''}`} onClick={() => onClick(note.toLowerCase())} ariaLabel={note}>
-    <img src={icons[note]} alt={note} />
+const IconButton = ({ icon, onClick }) => (
+  <button className={`${s.root} ${iconClasses[icon] ? iconClasses[icon].reduce((str, c) => `${str}${c} `, '') : ''}`} onClick={() => onClick(icon.toLowerCase())} ariaLabel={icon}>
+    <img src={icons[icon]} alt={icon} />
   </button>
 );
 
-NoteButton.propTypes = {
-  note: PropTypes.string,
+IconButton.propTypes = {
+  icon: PropTypes.string,
   onClick: PropTypes.func,
 };
 
-export default NoteButton;
+export default IconButton;

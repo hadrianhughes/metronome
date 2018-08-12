@@ -2,45 +2,43 @@ import React from 'react';
 
 import s from './EditPanel.scss';
 
-import backspace from '../../icons/Backspace.svg';
-
-import NoteButton from '../NoteButton';
+import IconButton from '../IconButton';
 
 const EditPanel = () => (
   <div className={s.root}>
     <div className={s.wrapper}>
       <div className={s.pane}>
         <div className={s.row}>
-          <NoteButton note="semibreve" onClick={note => console.log(note)} />
-          <NoteButton note="minim" onClick={note => console.log(note)} />
-          <NoteButton note="crotchet" onClick={note => console.log(note)} />
-          <NoteButton note="quaver" onClick={note => console.log(note)} />
-          <NoteButton note="semiquaver" onClick={note => console.log(note)} />
+          <IconButton icon="semibreve" onClick={note => console.log(note)} />
+          <IconButton icon="minim" onClick={note => console.log(note)} />
+          <IconButton icon="crotchet" onClick={note => console.log(note)} />
+          <IconButton icon="quaver" onClick={note => console.log(note)} />
+          <IconButton icon="semiquaver" onClick={note => console.log(note)} />
         </div>
         <div className={s.row}>
-          <NoteButton note="dottedSemibreve" onClick={note => console.log(note)} />
-          <NoteButton note="dottedMinim" onClick={note => console.log(note)} />
-          <NoteButton note="dottedCrotchet" onClick={note => console.log(note)} />
-          <NoteButton note="dottedQuaver" onClick={note => console.log(note)} />
-          <NoteButton note="dottedSemiquaver" onClick={note => console.log(note)} />
+          <IconButton icon="dottedSemibreve" onClick={note => console.log(note)} />
+          <IconButton icon="dottedMinim" onClick={note => console.log(note)} />
+          <IconButton icon="dottedCrotchet" onClick={note => console.log(note)} />
+          <IconButton icon="dottedQuaver" onClick={note => console.log(note)} />
+          <IconButton icon="dottedSemiquaver" onClick={note => console.log(note)} />
         </div>
         <div className={s.row}>
-          <NoteButton note="semibreveRest" onClick={note => console.log(note)} />
-          <NoteButton note="minimRest" onClick={note => console.log(note)} />
-          <NoteButton note="crotchetRest" onClick={note => console.log(note)} />
-          <NoteButton note="quaverRest" onClick={note => console.log(note)} />
-          <NoteButton note="semiquaverRest" onClick={note => console.log(note)} />
+          <IconButton icon="semibreveRest" onClick={note => console.log(note)} />
+          <IconButton icon="minimRest" onClick={note => console.log(note)} />
+          <IconButton icon="crotchetRest" onClick={note => console.log(note)} />
+          <IconButton icon="quaverRest" onClick={note => console.log(note)} />
+          <IconButton icon="semiquaverRest" onClick={note => console.log(note)} />
         </div>
         <div className={s.row}>
-          <NoteButton note="dottedSemibreveRest" onClick={note => console.log(note)} />
-          <NoteButton note="dottedMinimRest" onClick={note => console.log(note)} />
-          <NoteButton note="dottedCrotchetRest" onClick={note => console.log(note)} />
-          <NoteButton note="dottedQuaverRest" onClick={note => console.log(note)} />
-          <NoteButton note="dottedSemiquaverRest" onClick={note => console.log(note)} />
+          <IconButton icon="dottedSemibreveRest" onClick={note => console.log(note)} />
+          <IconButton icon="dottedMinimRest" onClick={note => console.log(note)} />
+          <IconButton icon="dottedCrotchetRest" onClick={note => console.log(note)} />
+          <IconButton icon="dottedQuaverRest" onClick={note => console.log(note)} />
+          <IconButton icon="dottedSemiquaverRest" onClick={note => console.log(note)} />
         </div>
       </div>
       <div className={s.pane}>
-        <NoteButton note="backspace" onClick={note => console.log(note)} />
+        <IconButton icon="backspace" onClick={note => console.log(note)} />
       </div>
     </div>
   </div>
