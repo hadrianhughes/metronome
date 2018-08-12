@@ -5,7 +5,7 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -13,29 +13,41 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
             loader: 'css-loader',
             options: {
               sourceMap: true,
               modules: true,
-              localIdentName: '[local]___[hash:base64:5]'
+              localIdentName: '[local]___[hash:base64:5]',
             }
           },
           {
-            loader: 'sass-loader'
-          }
-        ]
-      }
+            loader: 'sass-loader',
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      },
     ]
   },
   plugins: [
